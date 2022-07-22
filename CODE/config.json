@@ -1,0 +1,59 @@
+{
+    "parameters": [
+        {
+            "machine_queue_size": 3,
+            "batch_queue_size": 5,
+            "scheduling_method": "FEE",
+            "fairness_factor": 1.0
+        }
+    ],
+    "settings": [
+        {
+            "path_to_output": "./output",
+            "path_to_workload": "./workload",
+            "verbosity": 3,
+            "gui": 0
+        }
+    ],
+    "task_types": [
+        {
+            "id": 1,
+            "name": "TT1",
+            "urgency": "best_effort",
+            "deadline": 4.1
+        },
+        {
+            "id": 2,
+            "name": "TT2",
+            "urgency": "best_effort",
+            "deadline": 6.4
+        }
+    ],
+    "battery": [
+        {
+            "capacity": 100.0
+        }
+    ],
+    "machines": [
+        {
+            "type_id": 1,
+            "name": "cpu",
+            "power": 120,
+            "idle_power": 10,
+            "replicas": 1
+        },
+        {
+            "type_id": 2,
+            "name": "gpu",
+            "power": 300.0,
+            "idle_power": 10,
+            "replicas": 1
+        }
+    ],
+    "cloud": [
+        {
+            "bandwidth": 15000.0,
+            "network_latency": 0.015
+        }
+    ]
+}
